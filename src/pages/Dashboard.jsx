@@ -29,9 +29,16 @@ function Dashboard() {
           >
             <div className="b-game-card">
               <div 
-                className="b-game-card__cover" 
-                style={{ backgroundImage: `url(${card.image})` }}
+                className="b-game-card__cover"
               >
+                <img 
+                  src={card.image} 
+                  alt={card.title}
+                  loading={index < 2 ? "eager" : "lazy"}
+                  fetchpriority={index < 2 ? "high" : "low"}
+                  decoding="async"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
                 <div className="card-content-overlay">
                   <h3>{card.title}</h3>
                   <p>{card.desc}</p>

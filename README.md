@@ -152,9 +152,9 @@ npm run preview
 
 ##  Contact
 
-- **Yateesh:** 9640422382
-- **Sathwik Bhushan:** 9441956866
-- **Email:** inventum2k26@gmail.com
+- **Rahul varma mudunuru:** 9640422382
+
+- **Email:** inventum@anits.edu.in
 
 ##  Development
 

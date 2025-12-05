@@ -13,7 +13,9 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Rajesh Kumar', phone: '+91 98765 43210' },
         { name: 'Priya Sharma', phone: '+91 98765 43211' }
-      ]
+      
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 2, 
@@ -24,7 +26,8 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Rahul varma', phone: '+91 81250 13863' },
         { name: 'Sneha Patel', phone: '+91 98765 43213' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 3, 
@@ -35,7 +38,8 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Vikram Singh', phone: '+91 98765 43214' },
         { name: 'Divya Menon', phone: '+91 98765 43215' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 4, 
@@ -46,7 +50,8 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Karthik Rao', phone: '+91 98765 43216' },
         { name: 'Meera Nair', phone: '+91 98765 43217' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 5, 
@@ -57,7 +62,8 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Arun Gupta', phone: '+91 98765 43218' },
         { name: 'Lakshmi Iyer', phone: '+91 98765 43219' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 6, 
@@ -68,7 +74,8 @@ function TechnicalEvents() {
       coordinators: [
         { name: 'Sanjay Verma', phone: '+91 98765 43220' },
         { name: 'Pooja Desai', phone: '+91 98765 43221' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     }
   ];
 
@@ -90,6 +97,7 @@ function TechnicalEvents() {
             img={event.img}
             desc={event.desc}
             coordinators={event.coordinators}
+            registrationLink={event.registrationLink}
             delay={index * 100}
           />
         ))}

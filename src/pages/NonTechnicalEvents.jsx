@@ -13,7 +13,8 @@ function NonTechnicalEvents() {
       coordinators: [
         { name: 'Arjun Mehta', phone: '+91 98765 43222' },
         { name: 'Kavya Reddy', phone: '+91 98765 43223' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 2, 
@@ -24,7 +25,8 @@ function NonTechnicalEvents() {
       coordinators: [
         { name: 'Rohit Malhotra', phone: '+91 98765 43224' },
         { name: 'Anjali Singh', phone: '+91 98765 43225' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 3, 
@@ -35,7 +37,8 @@ function NonTechnicalEvents() {
       coordinators: [
         { name: 'Neha Joshi', phone: '+91 98765 43226' },
         { name: 'Akash Pandey', phone: '+91 98765 43227' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     { 
       id: 4, 
@@ -46,7 +49,8 @@ function NonTechnicalEvents() {
       coordinators: [
         { name: 'Manish Kumar', phone: '+91 98765 43228' },
         { name: 'Riya Kapoor', phone: '+91 98765 43229' }
-      ]
+      ],
+      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     }
   ];
 
@@ -68,6 +72,7 @@ function NonTechnicalEvents() {
             img={event.img}
             desc={event.desc}
             coordinators={event.coordinators}
+            registrationLink={event.registrationLink}
             delay={index * 100}
           />
         ))}

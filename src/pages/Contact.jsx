@@ -6,7 +6,7 @@ function Contact() {
     { icon: '📘', name: 'Facebook', url: '#', label: 'Follow us on Facebook' },
     { icon: '🐦', name: 'Twitter', url: '#', label: 'Follow us on Twitter' },
     { icon: '📸', name: 'Instagram', url: 'https://www.instagram.com/anits.aiml.official?igsh=MTQ1d2RkMWVsNWRqdg==', label: '@inventum_2k26' },
-    { icon: '🌐', name: 'Website', url: 'http://www.anits.edu.in/', label: 'Visit ANITS' }
+    { icon: '🌐', name: 'Website', url: 'https://www.anits.org/department/cse-ai-ml', label: 'Visit ANITS' }
   ];
 
   const contactInfo = [
@@ -46,7 +46,7 @@ function Contact() {
                 <div className="email-icon">📧</div>
                 <div className="email-content">
                   <h3>Email Us</h3>
-                  <a href="mailto:inventum2k26@gmail.com">inventum2k26@gmail.com</a>
+                  <a href="mailto:inventum@anits.edu.in">inventum@anits.edu.in</a>
                 </div>
               </div>
             </div>
