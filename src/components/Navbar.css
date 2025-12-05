@@ -1,0 +1,211 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #D32F2F;
+  box-shadow: 0 0 20px rgba(211, 47, 47, 0.3);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.brand-text {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  font-family: 'Benguiat', 'Times New Roman', serif;
+  color: #D32F2F;
+  text-shadow: 0 0 8px rgba(211, 47, 47, 0.8);
+  transition: all 0.3s ease;
+}
+
+.brand-year {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Benguiat', 'Times New Roman', serif;
+  color: #D32F2F;
+  text-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+.navbar-brand:hover .brand-text {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(211, 47, 47, 1), 0 0 25px rgba(211, 47, 47, 0.6);
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #D32F2F;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+.menu-toggle:hover span {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Benguiat', 'Times New Roman', serif;
+  letter-spacing: 0.15em;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D32F2F, transparent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.6);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #D32F2F;
+  text-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-back {
+  background: #D32F2F;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'Benguiat', 'Times New Roman', serif;
+  letter-spacing: 0.12em;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
+  border: 2px solid #D32F2F;
+}
+
+.nav-back:hover {
+  background: rgba(211, 47, 47, 0.8);
+  box-shadow: 0 0 20px rgba(211, 47, 47, 0.6);
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav-back::after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    border-left: 2px solid #ff0000;
+    box-shadow: -10px 0 30px rgba(255, 0, 0, 0.3);
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .navbar-container {
+    padding: 1rem;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+  }
+
+  .brand-year {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text {
+    font-size: 1.3rem;
+  }
+
+  .brand-year {
+    font-size: 0.9rem;
+  }
+}
