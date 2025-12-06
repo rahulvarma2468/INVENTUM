@@ -61,6 +61,16 @@ function Index() {
           <span className="btn-glow"></span>
         </Link>
         
+        <a 
+          className="btn-stranger btn-primary" 
+          href="https://forms.gle/tRD3cj4Jg9Ma4F1aA" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <span className="btn-text">REGISTER HERE</span>
+          <span className="btn-glow"></span>
+        </a>
+        
         <Link className="btn-stranger btn-secondary" to="/memories">
           <span className="btn-text">VIEW MEMORIES</span>
           <span className="btn-glow"></span>
