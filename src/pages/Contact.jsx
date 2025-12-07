@@ -11,8 +11,14 @@ function Contact() {
 
   const contactInfo = [
     { name: 'Rahul varma Mudunuru', phone: '8125013863', role: 'Fest Convenor' },
-    // { name: 'Sathwik Bhushan', phone: '9441956866', role: 'Event Manager' }
+    { name: 'K Sri Manoj Kumar', phone: '9398072182', role: 'Convenor' },
+    { name: 'R.V.Deekshitha', phone: '', role: 'Convenor' },
+    { name: 'B.Pranathi Hiranmayi', phone: '', role: 'Co-Convenor' },
+    { name: 'B.Sai Subramanyam', phone: '9030191192', role: 'Co-Convenor' }
   ];
+
+  const mainConvenor = contactInfo[0];
+  const otherConvenors = contactInfo.slice(1);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -50,15 +56,34 @@ function Contact() {
           >
             <h2 className="section-title">Contact Information</h2>
 
-            <div className="info-grid">
-              {contactInfo.map((contact, idx) => (
+            {/* Main Convenor Card */}
+            <motion.div className="main-convenor-wrapper" variants={itemVariants}>
+              <div className="info-card main-convenor-card">
+                <div className="info-icon">👤</div>
+                <div className="main-convenor-details">
+                  <h3>{mainConvenor.name}</h3>
+                  <p className="info-role">{mainConvenor.role}</p>
+                  {mainConvenor.phone && (
+                    <a href={`tel:${mainConvenor.phone}`} className="info-phone">
+                      📞 {mainConvenor.phone}
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Other Convenors Grid (2x2) */}
+            <div className="info-grid other-convenors-grid">
+              {otherConvenors.map((contact, idx) => (
                 <motion.div key={idx} className="info-card" variants={itemVariants}>
                   <div className="info-icon">👤</div>
                   <h3>{contact.name}</h3>
                   <p className="info-role">{contact.role}</p>
-                  <a href={`tel:${contact.phone}`} className="info-phone">
-                    📞 {contact.phone}
-                  </a>
+                  {contact.phone && (
+                    <a href={`tel:${contact.phone}`} className="info-phone">
+                      📞 {contact.phone}
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </div>
