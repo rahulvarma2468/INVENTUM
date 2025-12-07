@@ -1,5 +1,6 @@
 ﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Lightbox from '../components/Lightbox';
 import '../styles/gallery.css';
 
 function Gallery() {
@@ -73,25 +74,10 @@ function Gallery() {
 
       <AnimatePresence>
         {selectedImage && (
-          <motion.div
-            className="lightbox"
-            onClick={() => setSelectedImage(null)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="lightbox-content"
-              onClick={(e) => e.stopPropagation()}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-            >
-              <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
-              <img src={selectedImage.src} alt="Enlarged view" />
-              <p className="lightbox-description">{selectedImage.desc}</p>
-            </motion.div>
-          </motion.div>
+          <Lightbox
+            image={selectedImage}
+            onClose={() => setSelectedImage(null)}
+          />
         )}
       </AnimatePresence>
     </div>
