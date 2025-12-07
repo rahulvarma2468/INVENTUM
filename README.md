@@ -152,7 +152,7 @@ npm run preview
 
 ##  Contact
 
-- **Rahul varma mudunuru:** 9640422382
+- **Rahul varma mudunuru:** 8125013863
 
 - **Email:** inventum@anits.edu.in
 

@@ -1,0 +1,207 @@
+/* Landing Page Specific Styles */
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    /* Adjust for navbar */
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Logo & Title */
+.logo-wrapper {
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.4));
+}
+
+.universe-logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.title-section {
+    margin-bottom: 3rem;
+    perspective: 1000px;
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--st-red);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    text-shadow:
+        0 0 20px rgba(255, 0, 0, 0.5),
+        0 0 40px rgba(255, 0, 0, 0.3);
+}
+
+.main-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--st-red);
+    opacity: 0.8;
+    animation: flicker 4s infinite alternate;
+}
+
+.year-badge {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #fff;
+    margin-top: -1rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Countdown */
+.countdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.countdown-timer {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--st-red);
+    text-shadow: var(--text-glow);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border: 2px solid var(--st-dark-red);
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.countdown-label {
+    margin-top: 1rem;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Event Details */
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.date-box,
+.venue-box {
+    background: rgba(20, 0, 0, 0.6);
+    border: 1px solid var(--st-dark-red);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    color: #ccc;
+    font-size: 1.1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.date-box:hover,
+.venue-box:hover {
+    border-color: var(--st-red);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Buttons */
+.cta-group {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary {
+    position: relative;
+    background: transparent;
+    color: var(--st-red);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border: 2px solid var(--st-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: var(--st-red);
+    color: #000;
+    box-shadow: 0 0 30px var(--st-red);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #aaa;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #fff;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        opacity: 0.99;
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.3);
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}

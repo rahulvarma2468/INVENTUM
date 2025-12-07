@@ -1,4 +1,4 @@
-﻿import Navbar from '../components/Navbar';
+﻿import { motion } from 'framer-motion';
 import '../styles/contact.css';
 
 function Contact() {
@@ -14,10 +14,27 @@ function Contact() {
     // { name: 'Sathwik Bhushan', phone: '9441956866', role: 'Event Manager' }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100 }
+    }
+  };
+
   return (
     <div className="contact-page">
-      <Navbar showBack={true} />
-      
       <div className="page-header">
         <h1 className="page-title">Get In Touch</h1>
         <p className="page-description">Have questions? We're here to help!</p>
@@ -25,23 +42,28 @@ function Contact() {
 
       <div className="contact-container">
         <div className="contact-content">
-          <div className="contact-info-section">
+          <motion.div
+            className="contact-info-section"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <h2 className="section-title">Contact Information</h2>
-            
+
             <div className="info-grid">
               {contactInfo.map((contact, idx) => (
-                <div key={idx} className="info-card">
+                <motion.div key={idx} className="info-card" variants={itemVariants}>
                   <div className="info-icon">👤</div>
                   <h3>{contact.name}</h3>
                   <p className="info-role">{contact.role}</p>
                   <a href={`tel:${contact.phone}`} className="info-phone">
                     📞 {contact.phone}
                   </a>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div className="email-section">
+            <motion.div className="email-section" variants={itemVariants}>
               <div className="email-card">
                 <div className="email-icon">📧</div>
                 <div className="email-content">
@@ -49,15 +71,15 @@ function Contact() {
                   <a href="mailto:inventum@anits.edu.in">inventum@anits.edu.in</a>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="social-section">
-              <h3 className="social-title">Connect With Us</h3>
+            <motion.div className="social-section" variants={itemVariants}>
+              <h3 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Connect With Us</h3>
               <div className="social-links">
                 {socialLinks.map((social, idx) => (
-                  <a 
+                  <a
                     key={idx}
-                    href={social.url} 
+                    href={social.url}
                     className="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -68,17 +90,22 @@ function Contact() {
                   </a>
                 ))}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="map-section">
+          <motion.div
+            className="map-section"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             <h2 className="section-title">Find Us</h2>
             <div className="map-wrapper">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.2215656810276!2d83.42328881450933!3d17.92181689188923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39581b73ffffff%3A0xd04b9046faa4565f!2sANITS!5e0!3m2!1sen!2sin!4v1674847560792!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                style={{ border: 0, borderRadius: '15px' }}
+                style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 title="ANITS Location"
@@ -87,7 +114,7 @@ function Contact() {
             <p className="location-text">
               📍 Anil Neerukonda Institute Of Technology and Sciences, Visakhapatnam
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

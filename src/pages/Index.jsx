@@ -1,21 +1,28 @@
 ﻿import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/index.css';
+import { motion } from 'framer-motion';
+import '../styles/Landing.css';
 
 function Index() {
   const [countdown, setCountdown] = useState('');
 
   useEffect(() => {
-    const targetDate = new Date('Jan 8,2026 8:40:00').getTime();
+    const targetDate = new Date('Jan 8, 2026 08:40:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const secondsLeft = (targetDate - now) / 1000;
 
-      const days = parseInt(secondsLeft / 86400);
-      const hours = parseInt((secondsLeft % 86400) / 3600);
-      const minutes = parseInt((secondsLeft % 3600) / 60);
-      const seconds = parseInt(secondsLeft % 60);
+      if (secondsLeft < 0) {
+        setCountdown("EVENT STARTED");
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(secondsLeft / 86400);
+      const hours = Math.floor((secondsLeft % 86400) / 3600);
+      const minutes = Math.floor((secondsLeft % 3600) / 60);
+      const seconds = Math.floor(secondsLeft % 60);
 
       setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
     }, 1000);
@@ -23,64 +30,77 @@ function Index() {
     return () => clearInterval(interval);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100 }
+    }
+  };
+
   return (
-    <div className="stranger-container">
-      <div className="logo-container">
-        <img 
-          className="universe-logo" 
-          src="/images/final logo2.png" 
-          alt="Inventum logo" 
-        />
-      </div>
-
-      <div className="title-wrapper">
-        <span className="h12 cyberpunk-title">INVENTUM</span>
-      </div>
-      
-      <span className="year-badge">2K26</span>
-      
-      <div className="countdown-wrapper">
-        <h1 id="countdown" className="countdown-text">{countdown}</h1>
-        <p className="countdown-label">Until the Event Begins</p>
-      </div>
-
-      <div className="event-info">
-        <div className="date-badge">
-          <span className="date-icon">📅</span>
-          <span className="date-text">JANUARY 8 & 9, 2026</span>
+    <motion.div
+      className="landing-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="title-section" variants={itemVariants}>
+        <div className="logo-wrapper">
+          <img
+            className="universe-logo"
+            src="/images/final logo2.png"
+            alt="Inventum logo"
+          />
         </div>
-        
-        <p className="venue-text">
-          Anil Neerukonda Institute Of Technology and Sciences
-        </p>
-      </div>
+        <h1 className="main-title" data-text="INVENTUM">INVENTUM</h1>
+        <span className="year-badge">2K26</span>
+      </motion.div>
 
-      <div className="action-buttons">
-        <Link className="btn-stranger btn-primary" to="/dashboard">
-          <span className="btn-text">ENTER THE UPSIDE DOWN</span>
-          <span className="btn-glow"></span>
+      <motion.div className="countdown-section" variants={itemVariants}>
+        <div className="countdown-timer">{countdown}</div>
+        <p className="countdown-label">Time Remaining Until Breach</p>
+      </motion.div>
+
+      <motion.div className="event-details" variants={itemVariants}>
+        <div className="date-box">
+          📅 JANUARY 8 & 9, 2026
+        </div>
+        <div className="venue-box">
+          📍 Anil Neerukonda Institute Of Technology and Sciences
+        </div>
+      </motion.div>
+
+      <motion.div className="cta-group" variants={itemVariants}>
+        <Link to="/dashboard" className="btn-primary">
+          Enter The Upside Down
         </Link>
-        
-        <a 
-          className="btn-stranger btn-primary" 
-          href="https://forms.gle/tRD3cj4Jg9Ma4F1aA" 
-          target="_blank" 
+
+        <a
+          href="https://forms.gle/tRD3cj4Jg9Ma4F1aA"
+          target="_blank"
           rel="noopener noreferrer"
+          className="btn-primary"
         >
-          <span className="btn-text">REGISTER HERE</span>
-          <span className="btn-glow"></span>
+          Register Now
         </a>
-        
-        <Link className="btn-stranger btn-secondary" to="/memories">
-          <span className="btn-text">VIEW MEMORIES</span>
-          <span className="btn-glow"></span>
-        </Link>
-      </div>
 
-      <div className="scroll-indicator">
-        <span>↓</span>
-      </div>
-    </div>
+        <Link to="/memories" className="btn-secondary">
+          View Memories
+        </Link>
+      </motion.div>
+    </motion.div>
   );
 }
 
