@@ -129,6 +129,29 @@
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  /* Clickable */
+}
+
+/* Add an explicit hover effect for the image container to signal interactivity */
+.image-container::after {
+  content: '🔍';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+.image-container:hover .contact-photo {
+  filter: brightness(0.7);
 }
 
 .info-card:hover .image-container {
@@ -140,10 +163,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .info-card:hover .contact-photo {
+  /* transform: scale(1.1); - Removed scale here to avoid conflict with zoom icon logic if needed usually kept */
   transform: scale(1.1);
 }
 

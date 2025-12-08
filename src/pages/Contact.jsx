@@ -1,7 +1,11 @@
-﻿import { motion } from 'framer-motion';
+﻿import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import Lightbox from '../components/Lightbox';
 import '../styles/contact.css';
 
 function Contact() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const socialLinks = [
     { icon: '📘', name: 'Facebook', url: '#', label: 'Follow us on Facebook' },
     { icon: '🐦', name: 'Twitter', url: '#', label: 'Follow us on Twitter' },
@@ -91,7 +95,11 @@ function Contact() {
 
   const renderCard = (person, isMain = false) => (
     <div className={`info-card ${isMain ? 'main-convenor-card' : ''}`}>
-      <div className={`image-container ${isMain ? 'main-image-container' : ''}`}>
+      <div
+        className={`image-container ${isMain ? 'main-image-container' : ''}`}
+        onClick={() => setSelectedImage({ src: person.img, desc: person.name })}
+        title="Click to view full photo"
+      >
         <img
           src={person.img}
           alt={person.name}
@@ -235,6 +243,15 @@ function Contact() {
           </motion.div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <Lightbox
+            image={selectedImage}
+            onClose={() => setSelectedImage(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
