@@ -11,9 +11,13 @@
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.team-section {
+  margin-bottom: 4rem;
 }
 
 .section-title {
@@ -28,6 +32,17 @@
   display: inline-block;
 }
 
+/* Single Card Grid (for HOD) */
+.single-card-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.single-card-grid .info-card {
+  max-width: 400px;
+  width: 100%;
+}
+
 /* Main Convenor Styling */
 .main-convenor-wrapper {
   margin-bottom: 2rem;
@@ -40,14 +55,14 @@
   text-align: left;
   background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(40, 10, 10, 0.6));
   border: 2px solid var(--st-red);
+  padding: 1.5rem;
 }
 
-.main-convenor-card .info-icon {
-  font-size: 3rem;
-  margin-bottom: 0;
-  filter: drop-shadow(0 0 5px var(--st-red));
-  /* Always highlight icon */
+.main-convenor-card .image-container {
   flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 0;
 }
 
 .main-convenor-details {
@@ -55,28 +70,28 @@
 }
 
 .main-convenor-details h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 0.2rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
 .main-convenor-details .info-role {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  color: #aaa;
+  color: var(--st-red);
+  font-family: var(--font-heading);
 }
 
 .other-convenors-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Enforce 2 columns */
   gap: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 /* Fallback for general grid */
 .info-grid {
-  /* Using specific other-convenors-grid for the 2x2 layout, but this remains for generalized usage */
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .info-card {
@@ -87,6 +102,11 @@
   text-align: center;
   transition: all 0.3s ease;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .info-card:hover {
@@ -95,11 +115,51 @@
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
 }
 
+/* Image styling */
+.image-container {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.info-card:hover .image-container {
+  border-color: var(--st-red);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.contact-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover .contact-photo {
+  transform: scale(1.1);
+}
+
 .info-icon {
   font-size: 2rem;
-  margin-bottom: 1rem;
   filter: grayscale(1);
   transition: all 0.3s ease;
+}
+
+.fallback-icon {
+  display: none;
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-card:hover .info-icon {
@@ -111,6 +171,7 @@
   font-family: var(--font-heading);
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .info-role {
@@ -138,6 +199,15 @@
   box-shadow: 0 0 10px var(--st-red);
 }
 
+.contact-footer {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .email-card {
   background: rgba(20, 20, 20, 0.6);
   border: 1px solid rgba(255, 0, 0, 0.3);
@@ -147,6 +217,7 @@
   align-items: center;
   gap: 1rem;
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .email-card:hover {
@@ -201,9 +272,14 @@
   transform: translateX(5px);
 }
 
+.map-section {
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .map-wrapper {
-  height: 100%;
-  min-height: 400px;
+  height: 400px;
+  width: 100%;
   border: 1px solid #333;
   border-radius: 8px;
   overflow: hidden;
@@ -223,7 +299,7 @@
 }
 
 @media (max-width: 900px) {
-  .contact-content {
+  .contact-footer {
     grid-template-columns: 1fr;
   }
 }
@@ -237,6 +313,9 @@
 
   .other-convenors-grid {
     grid-template-columns: 1fr;
-    /* Switch to 1 column on very small screens */
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
   }
 }
