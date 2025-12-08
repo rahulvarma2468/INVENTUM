@@ -31,7 +31,7 @@ function TechnicalEvents() {
         { name: 'Rahul varma', phone: '+91 81250 13863' },
         { name: 'Sneha Patel', phone: '+91 98765 43213' }
       ],
-      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
+      registrationLink: 'https://forms.gle/XceLjfp8G5yd6Ank8'
     },
     {
       id: 3,

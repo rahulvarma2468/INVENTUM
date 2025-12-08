@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
 
         const init = () => {
             particles = [];
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 50; i++) {
                 particles.push(new Particle());
             }
         };

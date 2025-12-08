@@ -104,6 +104,7 @@ function Contact() {
           src={person.img}
           alt={person.name}
           className="contact-photo"
+          loading="lazy"
           onError={handleImageError}
         />
         <div className="info-icon fallback-icon">👤</div>
