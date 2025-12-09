@@ -1,6 +1,7 @@
 ﻿import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import useSecurity from './hooks/useSecurity';
 import './styles/loader.css';
 
 // Lazy load pages for performance
@@ -19,6 +20,8 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  useSecurity();
+
   return (
     <Router>
       <Layout>
