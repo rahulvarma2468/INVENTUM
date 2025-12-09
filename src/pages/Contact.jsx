@@ -14,19 +14,19 @@ function Contact() {
   ];
 
   const hodInfo = {
-    name: 'Prof.K.Selvani Deepthi',
+    name: 'Dr. K Selvani Deepthi',
     role: 'HOD',
     img: '/images/team/hod.jpg'
   };
 
   const facultyConvenors = [
-    { name: 'Dr.Karun kumar', role: 'Faculty Convenor', img: '/images/team/karun.jpg' },
-    { name: 'Mrs.K Suryakala eswari', role: 'Faculty Convenor', img: '/images/team/suryakala.jpg' }
+    { name: 'Dr. D Karun Kumar Reddy', role: 'Faculty Convenor', img: '/images/team/karun.jpg' },
+    { name: 'Mrs G Suryakala Easwari', role: 'Faculty Convenor', img: '/images/team/suryakala.jpg' }
   ];
 
   const facultyCoConvenors = [
-    { name: 'Mrs.K.Sruthi', role: 'Faculty Co-Convenor', img: '/images/team/sruthi.jpg' },
-    { name: 'P.Harin', role: 'Faculty Co-Convenor', img: '/images/team/harin.jpg' }
+    { name: 'Ms.Y.Sruthi', role: 'Faculty Co-Convenor', img: '/images/team/sruthi.jpg' },
+    { name: 'Mr.P.Harin', role: 'Faculty Co-Convenor', img: '/images/team/harin.jpg' }
   ];
 
   /* 

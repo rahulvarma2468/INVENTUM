@@ -61,7 +61,7 @@ function Navbar({ showBack = false }) {
         <div className="navbar-desktop">
           {showBack ? (
             <Link to="/dashboard" className="nav-link nav-back">
-              ← BACK TO UPSIDE DOWN
+              ← Back to the DOWNSIDE UP
             </Link>
           ) : (
             navLinks.map(link => (
@@ -102,7 +102,7 @@ function Navbar({ showBack = false }) {
                     className="mobile-nav-link nav-back"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    ← BACK TO UPSIDE DOWN
+                    ← Back to the DOWNSIDE UP
                   </Link>
                 ) : (
                   navLinks.map(link => (
