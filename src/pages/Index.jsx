@@ -64,8 +64,12 @@ function Index() {
             alt="Inventum logo"
           />
         </div>
-        <h1 className="main-title" data-text="INVENTUM">INVENTUM</h1>
-        <span className="year-badge">2K26</span>
+        <div className="st-title-group">
+          <div className="st-branding-bar"></div>
+          <h1 className="main-title" data-text="INVENTUM">INVENTUM</h1>
+          <div className="st-branding-bar"></div>
+          <span className="year-badge">2K26</span>
+        </div>
       </motion.div>
 
       <motion.div className="countdown-section" variants={itemVariants}>

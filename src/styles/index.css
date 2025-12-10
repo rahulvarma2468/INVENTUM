@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Creepster&display=swap');
-/* ITC Benguiat approximation or import if available */
-@import url('https://fonts.googleapis.com/css2?family=Benguiat+ITC:wght@700&display=swap'); /* Note: This might not be on Google Fonts, using fallback or local if present */
+@import url('https://fonts.cdnfonts.com/css/iceberg');
+@import url('https://fonts.cdnfonts.com/css/benguiat');
 
 :root {
   --st-red: #ff0000;
