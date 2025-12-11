@@ -33,6 +33,8 @@ const Layout = ({ children }) => {
                 this.speedX = Math.random() * 0.5 - 0.25;
                 this.speedY = Math.random() * 0.5 - 0.25;
                 this.opacity = Math.random() * 0.5 + 0.1;
+                // Add color variation: Mostly ash/grey, rare red spores
+                this.color = Math.random() > 0.9 ? 'rgba(255, 0, 0, 0.6)' : `rgba(180, 180, 180, ${this.opacity})`;
             }
 
             update() {
@@ -46,7 +48,7 @@ const Layout = ({ children }) => {
             }
 
             draw() {
-                ctx.fillStyle = `rgba(180, 180, 180, ${this.opacity})`;
+                ctx.fillStyle = this.color;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -55,7 +57,7 @@ const Layout = ({ children }) => {
 
         const init = () => {
             particles = [];
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) { // Increased particle count for better atmosphere
                 particles.push(new Particle());
             }
         };
@@ -83,6 +85,7 @@ const Layout = ({ children }) => {
 
     return (
         <div className="app-layout">
+            <div className="ambient-fog"></div>
             <div className="scanlines"></div>
             <div className="vignette"></div>
             <canvas ref={canvasRef} className="particles-canvas" />
