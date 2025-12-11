@@ -79,7 +79,7 @@ function Index() {
 
       <motion.div className="event-details" variants={itemVariants}>
         <div className="date-box">
-          📅 JANUARY 8 & 9, 2026
+          📅 JANUARY 8th & 9th, 2026
         </div>
         <div className="venue-box">
           📍 Anil Neerukonda Institute Of Technology and Sciences
