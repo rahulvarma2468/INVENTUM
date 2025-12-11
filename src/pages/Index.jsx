@@ -92,7 +92,7 @@ function Index() {
         </Link>
 
         <a
-          href="https://forms.gle/tRD3cj4Jg9Ma4F1aA"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc1Jp4AvbIVg3xeIx5mgmSfEqgoFVD-miu8scz22YKSUfCCkw/viewform?usp=sharing&ouid=111069876271548887122 "
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"
