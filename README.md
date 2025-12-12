@@ -1,10 +1,35 @@
-﻿# INVENTUM 2K26 - The Upside Down Edition 🌌
+﻿<div align="center">
 
-> **"Friends don't lie." But this website is the truth.**
-> 
-> Welcome to the official website for **INVENTUM 2K26**, the Annual Tech Symposium of ANITS (Dept of CSE-AIML & CSM).
+  <img src="public/images/final%20logo2.png" alt="Inventum Banner" width="100%" />
 
-![Inventum Banner](/public/images/final%20logo2.png)
+  # INVENTUM 2K26 - The Upside Down Edition 🌌
+
+  > **"Friends don't lie." But this website is the truth.**
+
+  Welcome to the official website for **INVENTUM 2K26**, the Annual Tech Symposium of ANITS (Dept of CSE-AIML & CSM).
+
+  <p>
+    <a href="https://reactjs.org/">
+      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    </a>
+    <a href="https://vitejs.dev/">
+      <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    </a>
+    <a href="https://www.framer.com/motion/">
+      <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+    </a>
+  </p>
+
+  <p>
+    <a href="#-about-the-project">About The Project</a> •
+    <a href="#-features">Features</a> •
+    <a href="#-getting-started">Getting Started</a> •
+    <a href="#-contact">Contact</a>
+  </p>
+
+</div>
+
+<br />
 
 ## 🕹️ About The Project
 
@@ -29,13 +54,6 @@ The site features:
     *   Interactive Photo Lightbox.
 *   **The Team**: Meet the HOD, Faculty, and Student Convenors behind the magic.
 *   **Responsive**: Optimized for mobile and desktop screens.
-
-## 🛠️ Built With
-
-*   ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) **React 18+**
-*   ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) **Vite** (Blazing fast build tool)
-*   ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white) **Framer Motion**
-*   **Vanilla CSS3** (Custom Variables, Flexbox/Grid, Keyframe Animations)
 
 ## 📂 Project Structure
 
@@ -114,13 +132,18 @@ npm run preview
 
 ## 📞 Contact
 
-**Rahul varma Mudunuru** (Fest Convenor)
-*   Phone: 8125013863
+<div align="center">
+
+**Rahul varma Mudunuru** (Fest Convenor)  
+📞 8125013863
 
 **Email**: inventum@anits.edu.in
 
+</div>
+
 ---
 
-*"Something is coming. Something hungry for blood. A shadow grows on the wall behind you, swallowing you in darkness."*
-
-**© 2026 INVENTUM Team**
+<div align="center">
+  <p><em>"Something is coming. Something hungry for blood. A shadow grows on the wall behind you, swallowing you in darkness."</em></p>
+  <p><strong>© 2026 INVENTUM Team</strong></p>
+</div>
