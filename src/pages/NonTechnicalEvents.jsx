@@ -11,13 +11,15 @@ function NonTechnicalEvents() {
   const nonTechnicalEvents = [
     {
       id: 1,
-      title: 'MR & MS INVENTUM',
+      title: 'Mr. & Ms. INVENTUM',
       date: 'January 8-9, 2026',
       img: '/images/mr-ms-inventum.jpg',
       desc: 'A talent-based personality contest to identify the most confident and creative students.',
       coordinators: [
-        { name: 'Arjun Mehta', phone: '+91 98765 43222' },
-        { name: 'Kavya Reddy', phone: '+91 98765 43223' }
+        { name: 'Porapu Sai Manaswi (4/4 CSM-C)', phone: '+91 7396464847' },
+        { name: 'S.Sai Surya Pranav (4/4 CSM - A)', phone: '+91 9182922215' },
+        { name: 'K. Joshi (3/4 CSM - C)', phone: '+91 9640679445' },
+        { name: 'Kella Swarnalatha (3/4 CSM - C)', phone: '+91 9063938286' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
@@ -28,32 +30,38 @@ function NonTechnicalEvents() {
       img: '/images/word-taboo.jpg',
       desc: 'A fun vocabulary-based game where participants make teammates guess words without using restricted terms.',
       coordinators: [
-        { name: 'Rohit Malhotra', phone: '+91 98765 43224' },
-        { name: 'Anjali Singh', phone: '+91 98765 43225' }
+        { name: 'SriSanjana Kinjarapu (4/4 CSM-C)', phone: '+91 8885019450' },
+        { name: 'Md Karishma (4/4 CSM - A)', phone: '+91 9346895722' },
+        { name: 'M.Dimbu Siva Ram (3/4 CSM -B)', phone: '+91 8978644781' },
+        { name: 'B.Harsha vardhan (3/4 CSM - B)', phone: '+91 8886937479' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     {
       id: 3,
-      title: 'HALF-ART',
+      title: 'HALF – ART',
       date: 'January 8-9, 2026',
       img: '/images/half-art.jpg',
       desc: 'A creativity challenge where participants receive half of a drawing and complete it.',
       coordinators: [
-        { name: 'Neha Joshi', phone: '+91 98765 43226' },
-        { name: 'Akash Pandey', phone: '+91 98765 43227' }
+        { name: 'L. Yaswanth Sai (4/4 CSM - B)', phone: '+91 9392988049' },
+        { name: 'R. Kavya Sri (4/4 CSM-B)', phone: '+91 7013238510' },
+        { name: 'Dekkapati Manisha (3/4 CSM - A)', phone: '+91 9666633055' },
+        { name: 'Janka Parthasai (3/4 CSM - B)', phone: '+91 9381314332' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
     {
       id: 4,
-      title: 'AD-MAD SHOW',
+      title: 'AD MAD SHOW',
       date: 'January 8-9, 2026',
       img: '/images/admad.jpg',
       desc: 'A creative advertisement competition where teams create and perform ads.',
       coordinators: [
-        { name: 'Manish Kumar', phone: '+91 98765 43228' },
-        { name: 'Riya Kapoor', phone: '+91 98765 43229' }
+        { name: 'U.Sri Mugdha (4/4 CSM-C)', phone: '+91 8639244240' },
+        { name: 'Ch. Sabareesh (4/4 CSM - B)', phone: '+91 6300001531' },
+        { name: 'P Lashya (3/4 CSM - C)', phone: '+91 7569782842' },
+        { name: 'B.Devisriprasad (3/4 CSM - B)', phone: '+91 7569063321' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     }

@@ -16,8 +16,9 @@ function TechnicalEvents() {
       img: '/images/vibe-coding.jpg',
       desc: 'A creativity-driven technical event where participants design innovative AI-based solutions.',
       coordinators: [
-        { name: 'Rajesh Kumar', phone: '+91 98765 43210' },
-        { name: 'Priya Sharma', phone: '+91 98765 43211' }
+        { name: 'SAKETH TALASU (3/4 CSM - B)', phone: '+91 8500451385' },
+        { name: 'D Kiranmai Meghana (3/4 CSM - C)', phone: '+91 7382310939' },
+        { name: 'Mohamed Farman Raza (3/4 CSM - B)', phone: '+91 7085931121' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
@@ -28,8 +29,10 @@ function TechnicalEvents() {
       img: '/images/career-craft.jpg',
       desc: 'A session-based event guiding students in resume building, LinkedIn optimization, and personal branding.',
       coordinators: [
-        { name: 'Rahul varma', phone: '+91 81250 13863' },
-        { name: 'Sneha Patel', phone: '+91 98765 43213' }
+        { name: 'M.Bhanu Prakash (4/4 CSM-C)', phone: '+91 7032807880' },
+        { name: 'B.Pranathi Hiranmayi (3/4 CSM-D)', phone: '+91 7569388878' },
+        { name: 'K.Lalitha (3/4 CSM-A)', phone: '+91 6301603328' },
+        { name: 'Pekala Harsha Vardhan (3/4 CSM -A)', phone: '+91 9502374126' }
       ],
       registrationLink: 'https://forms.gle/XceLjfp8G5yd6Ank8'
     },
@@ -40,8 +43,10 @@ function TechnicalEvents() {
       img: '/images/prompt-engineering.jpg',
       desc: 'An AI-focused competition where participants craft the best prompts to generate accurate outputs.',
       coordinators: [
-        { name: 'Vikram Singh', phone: '+91 98765 43214' },
-        { name: 'Divya Menon', phone: '+91 98765 43215' }
+        { name: 'Porapu Pavan Sai (4/4 CSM-C)', phone: '+91 6303463213' },
+        { name: 'Sunkasuri Manish Raj (4/4 CSM - A)', phone: '+91 6304458997' },
+        { name: 'Hemanth james (3/4 CSM - C)', phone: '+91 8143550439' },
+        { name: 'Vijay kumar angajala (3/4 CSM - B)', phone: '+91 9014361014' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
@@ -52,8 +57,10 @@ function TechnicalEvents() {
       img: '/images/tech-snake-ladder.jpg',
       desc: 'A gamified technical quiz inspired by the classic Snake & Ladder board game.',
       coordinators: [
-        { name: 'Karthik Rao', phone: '+91 98765 43216' },
-        { name: 'Meera Nair', phone: '+91 98765 43217' }
+        { name: 'B.Karthikeya (4/4 CSM-C)', phone: '+91 9440324671' },
+        { name: 'B.Venkata Siva (4/4 CSM-C)', phone: '+91 6281033579' },
+        { name: 'Patoju Yamuna (3/4 CSM - A)', phone: '+91 8977947791' },
+        { name: 'Basava Lokesh (3/4 CSM-C)', phone: '+91 6305427696' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
@@ -64,8 +71,12 @@ function TechnicalEvents() {
       img: '/images/paper-poster.jpg',
       desc: 'A platform for students to present innovative ideas through technical papers or posters.',
       coordinators: [
-        { name: 'Arun Gupta', phone: '+91 98765 43218' },
-        { name: 'Lakshmi Iyer', phone: '+91 98765 43219' }
+        { name: 'Y Deepak (4/4 CSM-B)', phone: '+91 9550391134' },
+        { name: 'K. Lakshmi likhita (4/4 CSM-B)', phone: '+91 9963696910' },
+        { name: 'Kaparapu Meghana (4/4 CSM-C)', phone: '+91 9063225329' },
+        { name: 'Jeevan Adari (3/4 CSM - C)', phone: '+91 9618041354' },
+        { name: 'Revadi Naga Sai Jaswanth (3/4 CSM - B)', phone: '+91 9848682442' },
+        { name: 'Karthik vagati (3/4 CSM - C)', phone: '+91 7013845339' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     },
@@ -76,8 +87,10 @@ function TechnicalEvents() {
       img: '/images/rapid-fire.jpg',
       desc: 'A fast-paced technical quiz where participants answer as many questions as possible.',
       coordinators: [
-        { name: 'Sanjay Verma', phone: '+91 98765 43220' },
-        { name: 'Pooja Desai', phone: '+91 98765 43221' }
+        { name: 'M. Mohan Kowshik (4/4 CSM-B)', phone: '+91 9059961875' },
+        { name: 'Kolli Yamini (4/4 CSM-C)', phone: '+91 8341641341' },
+        { name: 'Vamsi Puttepu (3/4 CSM - B)', phone: '+91 6301320060' },
+        { name: 'M.Hasini (3/4 CSM -B)', phone: '+91 6301320060' }
       ],
       registrationLink: 'https://forms.gle/YOUR_FORM_ID'
     }
