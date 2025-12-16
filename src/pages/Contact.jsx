@@ -37,7 +37,7 @@ function Contact() {
     {
       name: 'Rahul varma Mudunuru',
       phone: '8125013863',
-      role: 'Fest Convenor & Treasurer',
+      role: 'Fest Convenor',
       img: '/images/team/rahul.jpg'
     },
     {
