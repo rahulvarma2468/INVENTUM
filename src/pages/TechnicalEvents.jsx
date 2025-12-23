@@ -20,7 +20,7 @@ function TechnicalEvents() {
         { name: 'D Kiranmai Meghana (3/4 CSM - C)', phone: '+91 7382310939' },
         { name: 'Mohamed Farman Raza (3/4 CSM - B)', phone: '+91 7085931121' }
       ],
-      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
+      registrationLink: 'https://forms.gle/CLUCwAmD67S9nQ3S7'
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ function TechnicalEvents() {
         { name: 'Hemanth james (3/4 CSM - C)', phone: '+91 8143550439' },
         { name: 'Vijay kumar angajala (3/4 CSM - B)', phone: '+91 9014361014' }
       ],
-      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
+      registrationLink: ''
     },
     {
       id: 4,
@@ -62,7 +62,7 @@ function TechnicalEvents() {
         { name: 'Patoju Yamuna (3/4 CSM - A)', phone: '+91 8977947791' },
         { name: 'Basava Lokesh (3/4 CSM-C)', phone: '+91 6305427696' }
       ],
-      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
+      registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdOmHUIeulOGg2DbdXFbYloVA4rfTi26RLYQSZGTBifLB4hLQ/viewform?usp=header'
     },
     {
       id: 5,
@@ -78,7 +78,7 @@ function TechnicalEvents() {
         { name: 'Revadi Naga Sai Jaswanth (3/4 CSM - B)', phone: '+91 9848682442' },
         { name: 'Karthik vagati (3/4 CSM - C)', phone: '+91 7013845339' }
       ],
-      registrationLink: 'https://forms.gle/YOUR_FORM_ID'
+      registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSecev-QZzZf5STVCZ6e7kNlY7znS7Vopuolc_DaOuLxEDnhnw/viewform'
     },
     {
       id: 6,
