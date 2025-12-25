@@ -50,9 +50,42 @@ function EventModal({ event, onClose }) {
                     <div className="modal-body">
                         <p className="modal-description">{event.desc}</p>
 
+                        <div className="event-details-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+                            {event.venue && (
+                                <div className="detail-item">
+                                    <h4 style={{ color: 'var(--accent)', fontSize: '0.9rem', marginBottom: '0.2rem' }}>Venue</h4>
+                                    <p style={{ color: 'var(--text-primary)' }}>{event.venue}</p>
+                                </div>
+                            )}
+                            {event.prize && (
+                                <div className="detail-item">
+                                    <h4 style={{ color: 'var(--accent)', fontSize: '0.9rem', marginBottom: '0.2rem' }}>Cash Prize</h4>
+                                    <p style={{ color: 'var(--text-primary)' }}>{event.prize}</p>
+                                </div>
+                            )}
+                            {event.fee && (
+                                <div className="detail-item">
+                                    <h4 style={{ color: 'var(--accent)', fontSize: '0.9rem', marginBottom: '0.2rem' }}>Reg. Fee</h4>
+                                    <p style={{ color: 'var(--text-primary)' }}>{event.fee}</p>
+                                </div>
+                            )}
+                        </div>
+
                         <div className="modal-info">
                             <div className="coordinators-section">
-                                <h3>Coordinators</h3>
+                                {event.faculty && event.faculty.length > 0 && (
+                                    <div className="faculty-section" style={{ marginBottom: '1.5rem' }}>
+                                        <h3>Faculty Coordinators</h3>
+                                        <div className="coord-grid">
+                                            {event.faculty.map((fac, index) => (
+                                                <div key={index} className="coord-item">
+                                                    <span className="coord-name">{fac}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                                <h3>Student Coordinators</h3>
                                 <div className="coord-grid">
                                     {event.coordinators.map((coord, index) => (
                                         <div key={index} className="coord-item">

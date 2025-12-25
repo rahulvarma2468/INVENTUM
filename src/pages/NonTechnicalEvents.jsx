@@ -12,12 +12,16 @@ function NonTechnicalEvents() {
     {
       id: 1,
       title: 'Mr. & Ms. INVENTUM',
-      date: 'January 8-9, 2026',
-      img: '/images/mr-ms-inventum.jpg',
+      date: 'Jan 6, 7 & 9, 2026',
+      img: '/images/INv mr.png',
       desc: 'A talent-based personality contest to identify the most confident and creative students.',
+      venue: 'I-104',
+      prize: '₹2500/-(Mr), ₹2500/-(Ms)',
+      fee: '₹50/-',
+      faculty: ['Mrs. Bangaru Sailaja', 'Ms. Kotha Santhi Sanghamitra'],
       coordinators: [
         { name: 'Porapu Sai Manaswi (4/4 CSM-C)', phone: '+91 7396464847' },
-        { name: 'S.Sai Surya Pranav (4/4 CSM - A)', phone: '+91 9182922215' },
+        { name: 'G Varsha Priya (4/4 CSM - C)', phone: '+91 8897303374' },
         { name: 'K. Joshi (3/4 CSM - C)', phone: '+91 9640679445' },
         { name: 'Kella Swarnalatha (3/4 CSM - C)', phone: '+91 9063938286' }
       ],
@@ -26,9 +30,12 @@ function NonTechnicalEvents() {
     {
       id: 2,
       title: 'WORD TABOO',
-      date: 'January 8-9, 2026',
-      img: '/images/word-taboo.jpg',
+      date: 'January 9, 2026',
+      img: '/images/word.jpeg',
       desc: 'A fun vocabulary-based game where participants make teammates guess words without using restricted terms.',
+      venue: 'I-104',
+      prize: '1st: ₹2000, 2nd: ₹1500, 3rd: ₹500',
+      faculty: ['Mrs. Ch Sravanthi Sowdanya'],
       coordinators: [
         { name: 'SriSanjana Kinjarapu (4/4 CSM-C)', phone: '+91 8885019450' },
         { name: 'Md Karishma (4/4 CSM - A)', phone: '+91 9346895722' },
@@ -41,25 +48,31 @@ function NonTechnicalEvents() {
       id: 3,
       title: 'HALF – ART',
       date: 'January 8-9, 2026',
-      img: '/images/half-art.jpg',
+      img: '/images/half.png',
       desc: 'A creativity challenge where participants receive half of a drawing and complete it.',
+      venue: 'I-301',
+      prize: '1st: ₹1500, 2nd: ₹1000, 3rd: ₹500',
+      faculty: ['Mrs. K.Moni Sushma Deep'],
       coordinators: [
         { name: 'L. Yaswanth Sai (4/4 CSM - B)', phone: '+91 9392988049' },
         { name: 'R. Kavya Sri (4/4 CSM-B)', phone: '+91 7013238510' },
         { name: 'Dekkapati Manisha (3/4 CSM - A)', phone: '+91 9666633055' },
-        { name: 'Janka Parthasai (3/4 CSM - B)', phone: '+91 9381314332' }
+        { name: 'Basava Lokesh (3/4 CSM-C)', phone: '+91 6305427696' }
       ],
       registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSePS1slin-8vHOgcH_GajTk_0qYO3Q1R9J9lDZ7kA0xr5nCqQ/viewform?usp=sharing&ouid=100110760254831601712'
     },
     {
       id: 4,
       title: 'AD MAD SHOW',
-      date: 'January 8-9, 2026',
-      img: '/images/admad.jpg',
+      date: 'January 8, 2026',
+      img: '/images/ADmad .png',
       desc: 'A creative advertisement competition where teams create and perform ads.',
+      venue: 'I Block',
+      prize: '1st: ₹1500, 2nd: ₹1000',
+      faculty: ['Mr.S.Lokesh'],
       coordinators: [
         { name: 'U.Sri Mugdha (4/4 CSM-C)', phone: '+91 8639244240' },
-        { name: 'Ch. Sabareesh (4/4 CSM - B)', phone: '+91 6300001531' },
+        { name: 'Ch Dwarak (4/4 CSM - C)', phone: '+91 7702579832' },
         { name: 'P Lashya (3/4 CSM - C)', phone: '+91 7569782842' },
         { name: 'B.Devisriprasad (3/4 CSM - B)', phone: '+91 7569063321' }
       ],
