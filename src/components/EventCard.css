@@ -12,6 +12,9 @@
   cursor: pointer;
   height: 350px;
   /* Fixed height for uniformity */
+  content-visibility: auto;
+  /* Optimization for rendering */
+  contain: content;
 }
 
 .event-card:hover {
@@ -33,6 +36,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  will-change: transform;
+  /* Optimization for animation */
 }
 
 .event-card:hover .card-image {
