@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiX } from 'react-icons/hi';
+import { HiX, HiZoomIn, HiZoomOut } from 'react-icons/hi';
 import PropTypes from 'prop-types';
 import './Lightbox.css';
 
 function Lightbox({ image, onClose }) {
+    const [scale, setScale] = useState(1);
+
     if (!image) return null;
+
+    const handleZoomIn = (e) => {
+        e.stopPropagation();
+        setScale(prev => Math.min(prev + 0.5, 3));
+    };
+
+    const handleZoomOut = (e) => {
+        e.stopPropagation();
+        setScale(prev => Math.max(prev - 0.5, 1));
+    };
 
     return (
         <AnimatePresence>
@@ -15,6 +28,19 @@ function Lightbox({ image, onClose }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
             >
+                <div className="lightbox-controls" onClick={(e) => e.stopPropagation()}>
+                    <button className="control-btn" onClick={handleZoomOut} disabled={scale <= 1}>
+                        <HiZoomOut />
+                    </button>
+                    <span className="zoom-level">{Math.round(scale * 100)}%</span>
+                    <button className="control-btn" onClick={handleZoomIn} disabled={scale >= 3}>
+                        <HiZoomIn />
+                    </button>
+                    <button className="control-btn close-btn" onClick={onClose}>
+                        <HiX />
+                    </button>
+                </div>
+
                 <motion.div
                     className="lightbox-content"
                     onClick={(e) => e.stopPropagation()}
@@ -22,10 +48,14 @@ function Lightbox({ image, onClose }) {
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.8 }}
                 >
-                    <button className="lightbox-close" onClick={onClose} aria-label="Close">
-                        <HiX />
-                    </button>
-                    <img src={image.src} alt={image.alt || "Lightbox view"} />
+                    <motion.img
+                        src={image.src}
+                        alt={image.alt || "Lightbox view"}
+                        style={{ scale }}
+                        drag={scale > 1}
+                        dragConstraints={{ left: -scale * 200, right: scale * 200, top: -scale * 200, bottom: scale * 200 }}
+                        className="lightbox-image"
+                    />
                     {image.desc && <p className="lightbox-description">{image.desc}</p>}
                 </motion.div>
             </motion.div>

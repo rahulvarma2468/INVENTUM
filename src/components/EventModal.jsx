@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiX, HiZoomIn } from 'react-icons/hi';
 import PropTypes from 'prop-types';
@@ -10,7 +11,7 @@ function EventModal({ event, onClose }) {
 
     if (!event) return null;
 
-    return (
+    const modalContent = (
         <>
             <motion.div
                 className="event-modal-backdrop"
@@ -119,6 +120,8 @@ function EventModal({ event, onClose }) {
             </AnimatePresence>
         </>
     );
+
+    return createPortal(modalContent, document.body);
 }
 
 EventModal.propTypes = {
@@ -127,6 +130,10 @@ EventModal.propTypes = {
         date: PropTypes.string.isRequired,
         img: PropTypes.string.isRequired,
         desc: PropTypes.string.isRequired,
+        venue: PropTypes.string,
+        prize: PropTypes.string,
+        fee: PropTypes.string,
+        faculty: PropTypes.arrayOf(PropTypes.string),
         coordinators: PropTypes.arrayOf(
             PropTypes.shape({
                 name: PropTypes.string.isRequired,
